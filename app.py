@@ -90,3 +90,28 @@ print(summary.content)
 # # generate summary
 # summary = chat([HumanMessage(content=prompt)])
 # print(summary.content)
+
+
+#If you want to get the summary in French, you can instruct the model to generate the summary in French language.
+
+
+# prepare template for prompt
+# template = """You are an advanced AI assistant that summarizes online articles into bulleted lists in French.
+
+# Here's the article you need to summarize.
+
+# ==================
+# Title: {article_title}
+
+# {article_text}
+# ==================
+
+# Now, provide a summarized version of the article in a bulleted list format, in French.
+# """
+
+# format prompt
+prompt = template.format(article_title=article.title, article_text=article.text)
+
+# generate summary
+# summary = chat([HumanMessage(content=prompt)])
+# print(summary.content)
